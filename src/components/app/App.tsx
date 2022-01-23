@@ -1,8 +1,13 @@
 import MainScreen from '../main-screen/main-screen';
+import { Tickets } from '../../types/ticket';
 
-function App(): JSX.Element {
+type AppScreenProps = {
+  tickets: Tickets;
+}
+
+function App({ tickets }: AppScreenProps): JSX.Element {
   return (
-    <MainScreen />
+    <MainScreen tickets={tickets} />
   );
 }
 
